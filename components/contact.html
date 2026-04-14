@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect | SWITS Institute</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <style>
+        :root {
+            --brand-green: #13382C;
+            --brand-gold: #C48C1D;
+            --dark-bg: #030a08;
+        }
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            background-color: var(--dark-bg);
+            color: white;
+            overflow: hidden; /* For premium feel */
+        }
+
+        .mesh-bg {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: 
+                radial-gradient(circle at 50% 50%, rgba(19, 56, 44, 0.4) 0%, transparent 50%),
+                radial-gradient(circle at 10% 10%, rgba(196, 140, 29, 0.1) 0%, transparent 30%);
+            z-index: -1;
+            filter: blur(80px);
+        }
+
+        .contact-card {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(25px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 40px 100px rgba(0,0,0,0.5);
+        }
+
+        .connect-link {
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .connect-link:hover {
+            border-color: var(--brand-gold);
+            background: rgba(196, 140, 29, 0.1);
+            transform: scale(1.02);
+        }
+
+        .gold-glow {
+            text-shadow: 0 0 20px rgba(196, 140, 29, 0.4);
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-6">
+
+    <div class="mesh-bg"></div>
+
+    <div class="contact-card p-10 md:p-16 rounded-[3rem] max-w-xl w-full text-center relative overflow-hidden" data-aos="zoom-in">
+        <div class="absolute -top-10 -right-10 w-32 h-32 bg-swits-gold opacity-10 blur-3xl"></div>
+        
+        <div data-aos="fade-up" data-aos-delay="200">
+            <img src="../assets/img/web.png" alt="SWITS Logo" class="h-12 mx-auto mb-10">
+            <h2 class="text-4xl font-black mb-3 gold-glow">GET IN TOUCH</h2>
+            <p class="text-gray-500 text-[10px] font-black uppercase tracking-[0.5em] mb-12">Global Innovation Network</p>
+        </div>
+
+        <div class="space-y-4" data-aos="fade-up" data-aos-delay="400">
+            <a href="https://wa.me/923182264269" class="connect-link flex items-center justify-between px-8 py-5 rounded-2xl group">
+                <span class="text-xs font-black uppercase tracking-widest text-gray-300 group-hover:text-white transition-colors">Direct Assistance</span>
+                <span class="text-[#25D366] text-xs font-bold uppercase">WhatsApp</span>
+            </a>
+
+            <a href="https://www.youtube.com/@officialswitsinstitute/featured" class="connect-link flex items-center justify-between px-8 py-5 rounded-2xl group">
+                <span class="text-xs font-black uppercase tracking-widest text-gray-300 group-hover:text-white transition-colors">Learning Hub</span>
+                <span class="text-[#FF0000] text-xs font-bold uppercase">YouTube</span>
+            </a>
+
+            <a href="https://www.linkedin.com/in/skills-with-information-technology-solution-institute-6a243232b/" class="connect-link flex items-center justify-between px-8 py-5 rounded-2xl group">
+                <span class="text-xs font-black uppercase tracking-widest text-gray-300 group-hover:text-white transition-colors">Professional</span>
+                <span class="text-[#0077B5] text-xs font-bold uppercase">LinkedIn</span>
+            </a>
+        </div>
+
+        <div class="mt-12" data-aos="fade-up" data-aos-delay="600">
+            <p class="text-[9px] text-gray-600 font-black uppercase tracking-[0.3em] mb-6">Average Response: 24 Hours</p>
+            <a href="index.html" class="inline-block text-swits-gold text-[10px] font-black uppercase tracking-[0.4em] border-b border-swits-gold/30 pb-1 hover:border-swits-gold transition-all">
+                ← Return to Ecosystem
+            </a>
+        </div>
+    </div>
+
+    <script>
+        AOS.init({ duration: 1000, once: true });
+    </script>
+</body>
+</html>

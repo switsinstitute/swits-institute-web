@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI/UX Identity | SWITS Institute</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <style>
+        :root {
+            --swits-gold: #C48C1D;
+            --dark-bg: #030a08;
+        }
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            background-color: var(--dark-bg);
+            color: #94a3b8;
+        }
+        .mesh-bg {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: 
+                radial-gradient(circle at 50% 50%, rgba(196, 140, 29, 0.03) 0%, transparent 50%);
+            z-index: -1;
+        }
+        .design-card {
+            background: rgba(255, 255, 255, 0.01);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .design-card:hover {
+            border-color: var(--swits-gold);
+            background: rgba(255, 255, 255, 0.03);
+        }
+        .color-dot {
+            height: 12px; width: 12px; border-radius: 50%;
+        }
+        .typo-preview {
+            font-size: 2.5rem; line-height: 1; font-weight: 800; color: white;
+            letter-spacing: -0.05em;
+        }
+    </style>
+</head>
+<body class="py-10">
+
+    <div class="mesh-bg"></div>
+
+    <nav class="max-w-7xl mx-auto px-8 mb-20 flex justify-between items-center relative z-50">
+        <a href="index.html" class="block">
+            <img src="../assets/img/web.png" alt="Logo" class="h-10 md:h-14">
+        </a>
+        <a href="courses.html" class="text-[10px] font-black uppercase tracking-[0.4em] text-gray-500 hover:text-white transition-all">
+            ← Return to Academy
+        </a>
+    </nav>
+
+    <header class="max-w-4xl mx-auto text-center mb-32 px-6" data-aos="fade-up">
+        <div class="inline-block px-4 py-1 rounded-full border border-[#C48C1D]/20 mb-6 bg-[#C48C1D]/5">
+            <span class="text-[9px] font-black tracking-[0.3em] text-[#C48C1D] uppercase">Aesthetics & Psychology</span>
+        </div>
+        <h1 class="text-5xl md:text-7xl font-black text-white mb-8 tracking-tighter uppercase leading-[0.9]">
+            UI/UX <br><span class="text-[#C48C1D]">Identity Design</span>
+        </h1>
+        <p class="text-gray-500 max-w-2xl mx-auto font-medium leading-relaxed">
+            Architecting premium digital experiences by merging international minimalist 
+            design standards with deep human behavioral psychology.
+        </p>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6 space-y-24 pb-40">
+
+        <div class="design-card p-10 md:p-16 rounded-[3.5rem]" data-aos="fade-up">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <div class="text-[#C48C1D] text-xs font-black uppercase tracking-[0.5em] mb-6">Phase 01</div>
+                    <h2 class="text-4xl font-extrabold text-white mb-6 tracking-tight">Visual Hierarchy & Typography</h2>
+                    <p class="text-gray-400 mb-10 leading-relaxed font-medium">
+                        Master the "Golden Ratio" of digital layouts. Learn how to use whitespace, 
+                        modern typography (Montserrat/Poppins), and scale to guide the user's eye effortlessly.
+                    </p>
+                    
+                    <div class="bg-white/5 p-8 rounded-3xl border border-white/5">
+                        <p class="text-[10px] uppercase tracking-widest text-gray-500 mb-4 font-black">Applied Typography</p>
+                        <div class="typo-preview mb-2">Modernism.</div>
+                        <p class="text-xs text-[#C48C1D] font-bold uppercase tracking-widest">Weight: 800 Black / -5% Tracking</p>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="aspect-square rounded-[3rem] bg-gradient-to-br from-[#13382C] to-black border border-white/10 flex items-center justify-center">
+                        <div class="text-center">
+                            <div class="flex gap-4 mb-6 justify-center">
+                                <div class="w-16 h-16 rounded-2xl bg-[#C48C1D]"></div>
+                                <div class="w-16 h-16 rounded-2xl bg-white/10 border border-white/20"></div>
+                                <div class="w-16 h-16 rounded-2xl bg-[#13382C]"></div>
+                            </div>
+                            <p class="text-[10px] font-black uppercase tracking-[0.4em] text-white/40">Brand Color Theory</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="design-card p-10 md:p-16 rounded-[3.5rem]" data-aos="fade-up">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="order-2 lg:order-1">
+                    <div class="p-8 bg-black/40 rounded-[2.5rem] border border-white/5">
+                        <div class="space-y-6">
+                            <div class="flex justify-between items-center">
+                                <span class="text-xs font-bold text-white">Fitts's Law</span>
+                                <div class="h-1 w-20 bg-[#C48C1D] rounded-full"></div>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-xs font-bold text-white">Hick's Law</span>
+                                <div class="h-1 w-12 bg-white/20 rounded-full"></div>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-xs font-bold text-white">Gestalt Principles</span>
+                                <div class="h-1 w-32 bg-[#13382C] rounded-full"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2">
+                    <div class="text-[#C48C1D] text-xs font-black uppercase tracking-[0.5em] mb-6">Phase 02</div>
+                    <h2 class="text-4xl font-extrabold text-white mb-6 tracking-tight">Behavioral UX Logic</h2>
+                    <p class="text-gray-400 mb-10 leading-relaxed font-medium">
+                        Go beyond "pretty." Learn the psychological laws that dictate how users interact with screens. 
+                        We cover wireframing, user-flow optimization, and conversion-driven design.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="design-card p-10 md:p-16 rounded-[3.5rem] text-center" data-aos="fade-up">
+            <div class="max-w-2xl mx-auto">
+                <div class="text-[#C48C1D] text-xs font-black uppercase tracking-[0.5em] mb-6">Phase 03</div>
+                <h2 class="text-4xl font-extrabold text-white mb-6 tracking-tight">Elite Interaction Design</h2>
+                <p class="text-gray-400 mb-12 leading-relaxed font-medium">
+                    Bring static designs to life. Master micro-interactions in Figma, 
+                    advanced auto-layouts, and component-based design systems for scalable SaaS products.
+                </p>
+                <div class="inline-flex items-center gap-6 px-10 py-5 bg-white text-black font-black rounded-2xl text-[10px] uppercase tracking-widest hover:bg-[#C48C1D] transition-colors cursor-pointer">
+                    View Portfolio Standards
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="text-center py-20 opacity-20 border-t border-white/5">
+        <p class="text-[9px] font-black uppercase tracking-[0.5em]">SWITS Institute • Creative Identity Division v3.0</p>
+    </footer>
+
+    <script>
+        AOS.init({ duration: 1000, once: true });
+    </script>
+</body>
+</html>

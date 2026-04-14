@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Protocol | SWITS Institute</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <style>
+        :root {
+            --brand-green: #13382C;
+            --brand-gold: #C48C1D;
+            --dark-bg: #030a08;
+        }
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            background-color: var(--dark-bg);
+            color: #94a3b8;
+            line-height: 1.8;
+        }
+
+        .mesh-bg {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: 
+                radial-gradient(circle at 50% 0%, rgba(19, 56, 44, 0.3) 0%, transparent 50%);
+            z-index: -1;
+        }
+
+        .policy-card {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .section-number {
+            font-family: serif;
+            font-style: italic;
+            color: var(--brand-gold);
+            opacity: 0.5;
+        }
+
+        .gold-border-left {
+            border-left: 2px solid var(--brand-gold);
+            padding-left: 24px;
+        }
+    </style>
+</head>
+<body class="py-20 px-6">
+
+    <div class="mesh-bg"></div>
+
+    <div class="max-w-4xl mx-auto" data-aos="fade-up">
+        <div class="mb-16 text-center">
+            <img src="../assets/img/web.png" alt="SWITS Logo" class="h-12 mx-auto mb-6">
+            <h1 class="text-4xl md:text-5xl font-black text-white tracking-tight uppercase">Privacy <span class="text-swits-gold">Protocol</span></h1>
+            <p class="text-[10px] font-black uppercase tracking-[0.5em] text-gray-600 mt-4">Effective Date: 2026</p>
+        </div>
+
+        <div class="policy-card p-8 md:p-16 rounded-[2.5rem] shadow-2xl">
+            
+            <div class="mb-16 gold-border-left">
+                <div class="flex items-center gap-4 mb-4">
+                    <span class="section-number text-2xl">01</span>
+                    <h2 class="text-xl font-bold text-white uppercase tracking-widest">Data Collection</h2>
+                </div>
+                <p class="text-gray-400 font-medium">
+                    At SWITS Institute, we prioritize your digital sovereignty. We only collect essential identification data—specifically your <span class="text-white">Full Name</span> and <span class="text-white">WhatsApp contact</span>—primarily to facilitate seamless course updates and elite student support.
+                </p>
+            </div>
+
+            <div class="mb-16 gold-border-left">
+                <div class="flex items-center gap-4 mb-4">
+                    <span class="section-number text-2xl">02</span>
+                    <h2 class="text-xl font-bold text-white uppercase tracking-widest">Virtual Learning Security</h2>
+                </div>
+                <p class="text-gray-400 font-medium">
+                    As an innovation-focused architecture, we ensure that every digital session and student interaction is shielded under industry-standard encryption. Your learning journey is private, secure, and protected within our global virtual ecosystem.
+                </p>
+            </div>
+
+            <div class="mb-16 gold-border-left">
+                <div class="flex items-center gap-4 mb-4">
+                    <span class="section-number text-2xl">03</span>
+                    <h2 class="text-xl font-bold text-white uppercase tracking-widest">Infrastructure Tracking</h2>
+                </div>
+                <p class="text-gray-400 font-medium">
+                    Our cloud-hosted platform, powered by <span class="text-white">Cloudflare</span>, utilizes minimal technical cookies. These are strictly functional, designed to optimize your interface experience and maintain high-performance speeds across global nodes.
+                </p>
+            </div>
+
+            <div class="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+                <a href="index.html" class="text-swits-gold text-[10px] font-black uppercase tracking-[0.4em] hover:opacity-70 transition-all">
+                    ← Return to Home
+                </a>
+                <p class="text-[9px] font-black uppercase tracking-widest text-gray-700">SWITS Integrity System v1.0</p>
+            </div>
+        </div>
+
+        <div class="mt-20 text-center opacity-20">
+            <p class="text-[9px] font-black uppercase tracking-[0.4em]">Designed for Excellence • Secured for Future</p>
+        </div>
+    </div>
+
+    <script>
+        AOS.init({ duration: 1000, once: true });
+    </script>
+</body>
+</html>

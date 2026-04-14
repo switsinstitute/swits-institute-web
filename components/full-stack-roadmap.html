@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full-Stack Roadmap | SWITS Institute</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #030a08; color: white; }
+        .mesh-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at 50% 50%, rgba(19, 56, 44, 0.3) 0%, transparent 50%); z-index: -1; }
+        .glass-card { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.05); }
+        .code-block { background: #010409; border-radius: 12px; padding: 20px; border: 1px solid #30363d; font-family: monospace; color: #d1d5db; overflow-x: auto; }
+        .output-preview { background: white; border-radius: 12px; padding: 20px; color: black; border: 4px solid #C48C1D; }
+        .step-badge { background: #C48C1D; color: black; padding: 4px 12px; border-radius: 6px; font-weight: 800; font-size: 10px; text-transform: uppercase; }
+    </style>
+</head>
+<body class="py-10">
+    <div class="mesh-bg"></div>
+
+    <nav class="max-w-6xl mx-auto px-6 mb-16 flex justify-between items-center">
+        <a href="index.html" class="block"><img src="../assets/img/web.png" alt="Logo" class="h-10"></a>
+        <a href="courses.html" class="text-[10px] font-black uppercase tracking-widest text-gray-500 hover:text-white">← Back to Roadmaps</a>
+    </nav>
+
+    <header class="max-w-4xl mx-auto text-center mb-20 px-6">
+        <h1 class="text-5xl font-black mb-6">Full-Stack <span class="text-[#C48C1D]">Web Engineering</span></h1>
+        <p class="text-gray-400 font-medium leading-relaxed">Niche diye gaye steps ko follow karein. Har step mein aapko concept, uska code aur uska expected output milega.</p>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-6 space-y-20 pb-32">
+
+        <section class="glass-card p-8 md:p-12 rounded-[2.5rem]" data-aos="fade-up">
+            <div class="flex items-center gap-4 mb-6">
+                <span class="step-badge">Step 01</span>
+                <h2 class="text-2xl font-bold">Semantic HTML5 Structure</h2>
+            </div>
+            <p class="text-gray-400 mb-8">Sabse pehle hum website ka skeleton banate hain. Semantic tags (header, section, footer) SEO ke liye bohot zaroori hain.</p>
+            
+            <div class="grid lg:grid-cols-2 gap-8">
+                <div>
+                    <h4 class="text-xs font-black uppercase tracking-widest text-[#C48C1D] mb-4">Applied Code</h4>
+                    <pre class="code-block"><code>&lt;section class="hero"&gt;
+  &lt;h1&gt;Welcome to SWITS&lt;/h1&gt;
+  &lt;p&gt;Start your IT journey today.&lt;/p&gt;
+  &lt;button&gt;Enroll Now&lt;/button&gt;
+&lt;/section&gt;</code></pre>
+                </div>
+                <div>
+                    <h4 class="text-xs font-black uppercase tracking-widest text-[#C48C1D] mb-4">Visual Output Preview</h4>
+                    <div class="output-preview">
+                        <h1 class="text-2xl font-bold">Welcome to SWITS</h1>
+                        <p class="text-gray-600">Start your IT journey today.</p>
+                        <button class="mt-4 px-4 py-2 bg-gray-200 border border-gray-400 rounded text-sm">Enroll Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="glass-card p-8 md:p-12 rounded-[2.5rem]" data-aos="fade-up">
+            <div class="flex items-center gap-4 mb-6">
+                <span class="step-badge">Step 02</span>
+                <h2 class="text-2xl font-bold">Premium Styling (CSS3)</h2>
+            </div>
+            <p class="text-gray-400 mb-8">CSS ke zariye hum plain HTML ko ek professional look dete hain. Yahan hum Flexbox aur custom colors ka use karenge.</p>
+            
+            <div class="grid lg:grid-cols-2 gap-8">
+                <div>
+                    <h4 class="text-xs font-black uppercase tracking-widest text-[#C48C1D] mb-4">Applied Code</h4>
+                    <pre class="code-block"><code>.hero {
+  background: #13382C;
+  color: #C48C1D;
+  padding: 40px;
+  text-align: center;
+  border-radius: 20px;
+}</code></pre>
+                </div>
+                <div>
+                    <h4 class="text-xs font-black uppercase tracking-widest text-[#C48C1D] mb-4">Visual Output Preview</h4>
+                    <div class="output-preview" style="background: #13382C; color: #C48C1D; border: none;">
+                        <h1 class="text-2xl font-bold">Welcome to SWITS</h1>
+                        <p class="text-white opacity-80">Start your IT journey today.</p>
+                        <button class="mt-4 px-6 py-2 bg-[#C48C1D] text-black font-bold rounded-lg">Enroll Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="glass-card p-8 md:p-12 rounded-[2.5rem]" data-aos="fade-up">
+            <div class="flex items-center gap-4 mb-6">
+                <span class="step-badge">Step 03</span>
+                <h2 class="text-2xl font-bold">Interactivity (JavaScript)</h2>
+            </div>
+            <p class="text-gray-400 mb-8">JavaScript se hum user ke clicks aur actions ko control karte hain. Isse site "zinda" ho jati hai.</p>
+            
+            <div class="grid lg:grid-cols-2 gap-8">
+                <div>
+                    <h4 class="text-xs font-black uppercase tracking-widest text-[#C48C1D] mb-4">Applied Code</h4>
+                    <pre class="code-block"><code>const btn = document.querySelector('button');
+btn.addEventListener('click', () => {
+   alert('Admission Open!');
+});</code></pre>
+                </div>
+                <div>
+                    <h4 class="text-xs font-black uppercase tracking-widest text-[#C48C1D] mb-4">Visual Output Preview</h4>
+                    <div class="output-preview text-center">
+                        <div class="p-4 bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700">
+                            <strong>System Alert:</strong> Admission Open!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="text-center pb-20 opacity-30">
+        <p class="text-[9px] font-black uppercase tracking-widest">© 2026 SWITS INSTITUTE • GLOBAL CURRICULUM</p>
+    </footer>
+
+    <script>
+        AOS.init({ duration: 1000, once: true });
+    </script>
+</body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SWITS Institute | Elite Global Innovation</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <style>
+        :root {
+            --brand-green: #13382C;
+            --brand-gold: #C48C1D;
+            --dark-bg: #030a08;
+        }
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            background-color: var(--dark-bg);
+            color: white;
+            overflow-x: hidden;
+        }
+
+        .mesh-bg {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(19, 56, 44, 0.6) 0%, transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(196, 140, 29, 0.15) 0%, transparent 40%);
+            z-index: -1;
+            filter: blur(80px);
+        }
+
+        .logo-container img {
+            filter: drop-shadow(0 0 8px rgba(196, 140, 29, 0.3));
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .hero-title {
+            background: linear-gradient(to bottom, #ffffff 40%, #C48C1D 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.04em;
+        }
+
+        .btn-premium {
+            background: linear-gradient(135deg, var(--brand-gold) 0%, #a67618 100%);
+            box-shadow: 0 10px 30px -10px rgba(196, 140, 29, 0.5);
+            transition: all 0.3s ease;
+        }
+        .btn-premium:hover {
+            box-shadow: 0 15px 40px -5px rgba(196, 140, 29, 0.7);
+            transform: translateY(-4px);
+        }
+
+        /* Power Tool Button Style */
+        .btn-tool {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(196, 140, 29, 0.3);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-tool::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%; width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(196, 140, 29, 0.2), transparent);
+            transition: 0.5s;
+        }
+        .btn-tool:hover::before { left: 100%; }
+        .btn-tool:hover {
+            border-color: var(--brand-gold);
+            background: rgba(196, 140, 29, 0.08);
+            box-shadow: 0 0 20px rgba(196, 140, 29, 0.15);
+        }
+
+        .progress-bar {
+            position: fixed;
+            top: 0; left: 0; height: 3px;
+            background: var(--brand-gold);
+            z-index: 999;
+            width: 0%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="progress-bar" id="bar"></div>
+    <div class="mesh-bg"></div>
+
+    <nav class="fixed top-0 w-full z-[100] transition-all duration-500 py-6" id="navbar">
+    <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+        <div class="logo-container" data-aos="fade-right">
+            <a href="index.html" class="block">
+                <img src="../assets/img/web.png" alt="SWITS Logo" class="h-12 md:h-16 w-auto cursor-pointer">
+            </a>
+        </div>
+        
+        <ul class="hidden lg:flex gap-12 text-[10px] font-black uppercase tracking-[0.3em] text-gray-400">
+            <li class="relative group">
+                <a href="index.html" class="text-white">Home</a>
+                <span class="absolute -bottom-2 left-0 w-full h-0.5 bg-[#C48C1D]"></span>
+            </li>
+            <li><a href="courses.html" class="hover:text-white transition-all">Academy</a></li>
+            <li><a href="tools.html" class="text-[#C48C1D] hover:brightness-125 transition-all">Innovation Lab</a></li>
+            <li><a href="about.html" class="hover:text-white transition-all">Identity</a></li>
+            <li><a href="contact.html" class="hover:text-white transition-all">Connect</a></li>
+        </ul>
+
+        <div data-aos="fade-left">
+            <a href="https://wa.me/yournumber" class="btn-premium text-black text-xs font-black px-8 py-3.5 rounded-xl uppercase tracking-widest">
+                Enroll Now
+            </a>
+        </div>
+    </div>
+</nav>
+
+    <main class="relative min-h-screen flex flex-col justify-center items-center px-6 pt-32 md:pt-40 text-center">
+        <div class="z-10">
+            <div data-aos="zoom-in" data-aos-duration="1200">
+                <div class="inline-flex items-center gap-2 py-2 px-4 rounded-full border border-white/10 bg-white/5 backdrop-blur-md mb-12">
+                    <span class="w-2 h-2 rounded-full bg-[#C48C1D] animate-ping"></span>
+                    <span class="text-[9px] font-black tracking-[0.5em] uppercase text-gray-300">Global Innovation 2026</span>
+                </div>
+            </div>
+
+            <h1 class="text-7xl md:text-[10rem] font-black leading-[0.85] mb-12 hero-title" data-aos="fade-up" data-aos-delay="200">
+                SKILLS.<br>VALUES.<br>FUTURE.
+            </h1>
+            
+            <p class="max-w-2xl mx-auto text-gray-400 text-lg md:text-xl font-medium leading-relaxed mb-16 opacity-80" data-aos="fade-up" data-aos-delay="400">
+                Crafting the next generation of <span class="text-white">Cyber-Engineers</span> and <span class="text-white">Full-Stack Architects</span> through an elite virtual ecosystem.
+            </p>
+
+<div class="relative z-20 flex flex-col md:flex-row gap-6 justify-center items-center mb-32" data-aos="fade-up" data-aos-delay="600">
+    <a href="courses.html" class="btn-premium w-full md:w-auto px-14 py-5 text-black font-black rounded-2xl text-sm tracking-widest uppercase text-center inline-block">
+        Launch Academy
+    </a>
+
+    <a href="tools.html" class="btn-tool w-full md:w-auto px-14 py-5 text-[#C48C1D] font-black rounded-2xl text-sm tracking-widest uppercase text-center inline-flex items-center justify-center gap-3">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.673.337a4 4 0 01-2.586.345l-1.1-.22m7.377 2.126a2 2 0 00-.738-.034l-2.297.383a2 2 0 01-1.461-.181l-.686-.343a4 4 0 00-2.522-.334 2 2 0 00-.595.134l-2.158.719a2 2 0 01-1.274 0l-2.158-.719a2 2 0 01-1.274 0L2.21 18.07a2 2 0 01-.595-.135 4 4 0 00-2.522.333l-.686.343a2 2 0 01-1.461.181l-2.297-.383a2 2 0 01-.738.034"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+        Innovation Lab
+    </a>
+
+    <a href="about.html" class="w-full md:w-auto px-14 py-5 border border-white/20 hover:border-[#C48C1D]/50 rounded-2xl font-black text-sm tracking-widest uppercase bg-white/5 transition-all text-center inline-block">
+        View Roadmaps
+    </a>
+</div>
+
+        <div class="absolute bottom-6 left-1/2 -translate-x-1/2 opacity-20 flex flex-col items-center gap-4">
+            <span class="text-[10px] tracking-[0.4em] uppercase font-bold">Scroll to Explore</span>
+            <div class="w-[1px] h-12 bg-gradient-to-b from-[#C48C1D] to-transparent"></div>
+        </div>
+    </main>
+
+    <section class="py-40 px-6 max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-3 gap-10">
+            <div class="p-12 bg-white/5 rounded-[2.5rem] border border-white/5 hover:bg-white/[0.08] transition-all group" data-aos="fade-up">
+                <div class="w-16 h-16 bg-[#C48C1D]/10 rounded-2xl flex items-center justify-center mb-8">
+                    <svg class="w-8 h-8 text-[#C48C1D]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                </div>
+                <h3 class="text-2xl font-bold mb-4 text-white">Elite Cybersecurity</h3>
+                <p class="text-gray-400 leading-relaxed font-medium">Master the art of digital defense with international-grade network security protocols.</p>
+            </div>
+
+            <div class="p-12 bg-white/5 rounded-[2.5rem] border border-white/5 hover:bg-white/[0.08] transition-all group" data-aos="fade-up" data-aos-delay="200">
+                <div class="w-16 h-16 bg-[#C48C1D]/10 rounded-2xl flex items-center justify-center mb-8">
+                    <svg class="w-8 h-8 text-[#C48C1D]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                </div>
+                <h3 class="text-2xl font-bold mb-4 text-white">Full-Stack Scale</h3>
+                <p class="text-gray-400 leading-relaxed font-medium">Build high-performance SaaS applications using modern architectural patterns.</p>
+            </div>
+
+            <div class="p-12 bg-white/5 rounded-[2.5rem] border border-white/5 hover:bg-white/[0.08] transition-all group" data-aos="fade-up" data-aos-delay="400">
+                <div class="w-16 h-16 bg-[#C48C1D]/10 rounded-2xl flex items-center justify-center mb-8">
+                    <svg class="w-8 h-8 text-[#C48C1D]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path></svg>
+                </div>
+                <h3 class="text-2xl font-bold mb-4 text-white">UI/UX Identity</h3>
+                <p class="text-gray-400 leading-relaxed font-medium">Designing premium experiences that stand out in the global digital marketplace.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-20 px-6 border-t border-white/5 relative bg-[#050505]">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-12">
+            <div class="col-span-2">
+                <img src="../assets/img/web.png" alt="SWITS Logo" class="h-12 mb-8">
+                <p class="text-gray-500 max-w-sm mb-8 font-medium">Redefining digital intelligence through mastery and innovation. Join the elite community of global tech pioneers.</p>
+                <div class="flex gap-6">
+                    <a href="https://www.linkedin.com/in/skills-with-information-technology-solution-institute-6a243232b/" class="text-gray-400 hover:text-[#C48C1D] transition-colors"><span class="text-xs font-black uppercase tracking-widest">LinkedIn</span></a>
+                    <a href="https://x.com/Swits_Institute" class="text-gray-400 hover:text-[#C48C1D] transition-colors"><span class="text-xs font-black uppercase tracking-widest">Twitter</span></a>
+                    <a href="https://github.com/switsinstitute" class="text-gray-400 hover:text-[#C48C1D] transition-colors"><span class="text-xs font-black uppercase tracking-widest">GitHub</span></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-white font-black text-xs uppercase tracking-[0.3em] mb-8">Quick Access</h4>
+                <ul class="space-y-4 text-gray-500 text-sm font-semibold">
+                    <li><a href="courses.html" class="hover:text-[#C48C1D] transition-colors">Courses Academy</a></li>
+                    <li><a href="tools.html" class="hover:text-[#C48C1D] transition-colors font-bold">Innovation Lab</a></li>
+                    <li><a href="about.html" class="hover:text-[#C48C1D] transition-colors">Our Identity</a></li>
+                    <li><a href="privacy-policy.html" class="hover:text-[#C48C1D] transition-colors">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-black text-xs uppercase tracking-[0.3em] mb-8">Connect</h4>
+                <p class="text-gray-500 text-sm font-semibold mb-4">skillswithitsolution@gmail.com</p>
+                <a href="https://wa.me/923182264269" class="text-[#C48C1D] text-sm font-black underline decoration-2 underline-offset-8">WhatsApp Support</a>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto pt-20 mt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-[10px] font-black uppercase tracking-widest text-gray-600">© 2026 SWITS Institute. All Rights Reserved.</p>
+            <p class="text-[10px] font-black uppercase tracking-widest text-gray-600">Designed with Excellence</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/923182264269" class="fixed bottom-10 right-10 z-[100] group">
+        <div class="absolute inset-0 bg-[#25D366] blur-3xl opacity-20 group-hover:opacity-60 transition-all duration-700"></div>
+        <div class="relative bg-white/5 backdrop-blur-xl border border-white/10 p-5 rounded-2xl flex items-center justify-center shadow-2xl group-hover:-translate-y-4 transition-all duration-500">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="w-8 h-8" alt="WhatsApp">
+        </div>
+    </a>
+
+    <script>
+        AOS.init({ duration: 1000, once: false });
+
+        window.onscroll = function() {
+            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrolled = (winScroll / height) * 100;
+            document.getElementById("bar").style.width = scrolled + "%";
+
+            const nav = document.getElementById('navbar');
+            if (winScroll > 50) {
+                nav.style.background = "rgba(3, 10, 8, 0.95)";
+                nav.style.backdropFilter = "blur(20px)";
+                nav.classList.add('py-4', 'border-b', 'border-white/5', 'shadow-2xl');
+            } else {
+                nav.style.background = "transparent";
+                nav.style.backdropFilter = "none";
+                nav.classList.remove('py-4', 'border-b', 'border-white/5', 'shadow-2xl');
+            }
+        };
+    </script>
+</body>
+</html>
